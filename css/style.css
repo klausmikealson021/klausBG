@@ -9,7 +9,7 @@
 
     font-family: "Vazirmatn";
 
-    src: url("../assets/fonts/Persian/Vazirmatn.woff2");
+    src: url("../assets/fonts/Persian/Vazirmatn-VariableFont_wght.ttf");
 
 }
 
@@ -18,7 +18,7 @@
 
     font-family: "Lalezar";
 
-    src: url("../assets/fonts/Persian/Lalezar.woff2");
+    src: url("../assets/fonts/Persian/Lalezar-Regular.ttf");
 
 }
 
@@ -27,7 +27,7 @@
 
     font-family: "Nastaliq";
 
-    src: url("../assets/fonts/Persian/NotoNastaliq.woff2");
+    src: url("../assets/fonts/Persian/NotoNastaliqUrdu-VariableFont_wght.ttf");
 
 }
 
@@ -40,7 +40,7 @@
 
     font-family: "NotoSerif";
 
-    src: url("../assets/fonts/English/NotoSerif.woff2");
+    src: url("../assets/fonts/English/NotoSerif-Italic-VariableFont_wdth,wght.ttf");
 
 }
 
@@ -49,7 +49,7 @@
 
     font-family: "Cormorant";
 
-    src: url("../assets/fonts/English/CormorantGaramond.woff2");
+    src: url("../assets/fonts/English/CormorantGaramond-Italic-VariableFont_wght.ttf");
 
 }
 
@@ -58,7 +58,7 @@
 
     font-family: "Pacifico";
 
-    src: url("../assets/fonts/English/Pacifico.woff2");
+    src: url("../assets/fonts/English/Pacifico-Regular.ttf");
 
 }
 
