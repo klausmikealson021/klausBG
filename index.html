@@ -1,121 +1,59 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KLAUS — Brand Guide</title>
-  <meta name="description" content="The KLAUS Brand Guide — identity system, assets, and sound.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ============ FONTS ============
-       Setup only, per brief — not final typography design.
-       EN: Noto Serif (body), Cormorant Garamond (display), Pacifico (script)
-       FA: Vazirmatn (body), Lalezar (display), Noto Nastaliq Urdu (script) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Pacifico&family=Vazirmatn:wght@400;500;600&family=Lalezar&family=Noto+Nastaliq+Urdu&display=swap"
-    rel="stylesheet">
+    <title>KLAUS Brand Guide</title>
 
-  <!-- ============ STYLES ============
-       Order matters: tokens -> motion utilities -> layout/skin -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
 </head>
+
 <body>
 
-  <a class="skip-link" href="#hero">Skip to content</a>
+    <main class="page">
 
-  <!-- ============ NAVIGATION ============
-       Minimal by design at this stage: brand mark + language switch only.
-       Section links will be added once each section has real content. -->
-  <nav class="kbg-nav" aria-label="Primary">
-    <span class="kbg-nav__mark" aria-hidden="true">K</span>
-    <button id="langToggle" class="kbg-lang-toggle" type="button" aria-label="Switch language">
-      <span class="kbg-lang-toggle__target" data-i18n="nav.langTarget">فارسی</span>
-    </button>
-  </nav>
-
-  <main>
-
-    <!-- ============ OPENING ============ -->
-    <section id="opening" class="kbg-section kbg-opening">
-      <p class="kbg-eyebrow kbg-fade-in" data-i18n="opening.eyebrow">The Brand Guide</p>
-      <h1 class="kbg-opening__mark kbg-fade-in kbg-fade-in--delay-1" data-i18n="opening.mark">KLAUS</h1>
-    </section>
-
-    <!-- ============ HERO ============
-         Full-screen video background. Autoplay + muted + loop for a
-         cinematic, ambient opening moment; a scrim keeps text legible. -->
-    <section id="hero" class="kbg-section kbg-hero">
-
-      <div class="kbg-hero__video-wrap">
-        <video
-          class="kbg-hero__video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="assets/images/logo/klaus-logo.png">
-          <!-- REPLACE: point this at the real hero background video file
-               once it's added to assets/video/. See assets/video/README.md -->
-          <source src="assets/video/background/klaus-intro.mp4">
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="assets/video/background/klaus-intro.mp4" type="video/mp4">
         </video>
-        <div class="kbg-hero__scrim"></div>
-      </div>
 
-      <div class="kbg-hero__content">
-        <p class="kbg-eyebrow kbg-fade-in" data-i18n="hero.eyebrow">Est. Identity</p>
-        <h2 class="kbg-hero__title kbg-fade-in kbg-fade-in--delay-1" data-i18n="hero.title">The KLAUS Brand Guide</h2>
-        <p class="kbg-hero__subtitle kbg-fade-in kbg-fade-in--delay-2" data-i18n="hero.subtitle">A cinematic system of identity, craft and sound.</p>
-      </div>
+        <div class="video-overlay"></div>
 
-      <div class="kbg-hero__scroll-cue"><span></span></div>
-    </section>
 
-    <!-- ============ PLACEHOLDER SECTIONS ============
-         Empty on purpose — structure only. No cards, no final content. -->
+        <header class="navigation">
 
-    <section id="philosophy" class="kbg-section kbg-placeholder">
-      <span class="kbg-placeholder__index" aria-hidden="true">01</span>
-      <h3 class="kbg-placeholder__title" data-i18n="philosophy.title">Brand Philosophy</h3>
-      <!-- TODO: Brand Philosophy content -->
-    </section>
+            <img 
+            src="assets/images/logo/klaus-logo.png" 
+            class="logo"
+            alt="Klaus Logo">
 
-    <section id="identity" class="kbg-section kbg-placeholder">
-      <span class="kbg-placeholder__index" aria-hidden="true">02</span>
-      <h3 class="kbg-placeholder__title" data-i18n="identity.title">Identity System</h3>
-      <!-- TODO: Identity System content -->
-    </section>
+            <button class="language-switch">
+                EN
+            </button>
 
-    <section id="asset-library" class="kbg-section kbg-placeholder">
-      <span class="kbg-placeholder__index" aria-hidden="true">03</span>
-      <h3 class="kbg-placeholder__title" data-i18n="assetLibrary.title">Asset Library</h3>
-      <!-- TODO: Asset Library content -->
-    </section>
+        </header>
 
-    <section id="ai-system" class="kbg-section kbg-placeholder">
-      <span class="kbg-placeholder__index" aria-hidden="true">04</span>
-      <h3 class="kbg-placeholder__title" data-i18n="aiSystem.title">AI System</h3>
-      <!-- TODO: AI System content -->
-    </section>
 
-    <section id="music" class="kbg-section kbg-placeholder">
-      <span class="kbg-placeholder__index" aria-hidden="true">05</span>
-      <h3 class="kbg-placeholder__title" data-i18n="music.title">Music Experience</h3>
-      <!-- TODO: Music Experience content -->
-    </section>
+        <section class="hero">
 
-    <!-- ============ CLOSING ============ -->
-    <section id="closing" class="kbg-section kbg-closing">
-      <h3 data-i18n="closing.title">KLAUS</h3>
-      <p data-i18n="closing.subtitle">A brand guide, in motion.</p>
-    </section>
+            <h1>
+                راهنمای برند کلاوس
+            </h1>
 
-  </main>
+            <p>
+                سیستم هوشمند هویت، طراحی و تجربه برند
+            </p>
 
-  <script src="js/main.js"></script>
+        </section>
+
+
+    </main>
+
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
