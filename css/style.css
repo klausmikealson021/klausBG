@@ -1,257 +1,187 @@
-/* ==========================================================================
-   KBG — Base Stylesheet
-   This is the visual FOUNDATION only: reset, layout skeleton, nav, hero
-   video system, and empty placeholder sections. No cards, no final
-   typography design, no complex effects — see project brief.
-   ========================================================================== */
-
-/* ---- Reset -------------------------------------------------------------- */
-*, *::before, *::after { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  background: var(--kbg-color-bg);
-  color: var(--kbg-color-text);
-  scroll-behavior: smooth;
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-img, video { max-width: 100%; display: block; }
 
-/* ---- Language / direction ------------------------------------------------
-   html[lang] is toggled by js/main.js. Default document is English/LTR;
-   Persian flips direction and swaps the active font family. */
-html[lang="en"] body {
-  direction: ltr;
-  font-family: var(--font-en-body);
-}
+html,
+body {
 
-html[lang="fa"] body {
-  direction: rtl;
-  font-family: var(--font-fa-body);
+    width:100%;
+    height:100%;
+
+    overflow-x:hidden;
+
+    background:var(--bg);
+
 }
 
-html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 {
-  font-family: var(--font-en-display);
-}
-html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] h3 {
-  font-family: var(--font-fa-display);
+
+body {
+
+    color:var(--white);
+
 }
 
-h1, h2, h3 {
-  margin: 0;
-  font-weight: 500;
-  color: var(--kbg-color-text);
+
+.page {
+
+    width:100%;
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
 }
 
-p {
-  margin: 0;
-  color: var(--kbg-color-text-muted);
-  line-height: 1.7;
+
+/* Background Video */
+
+.background-video {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:0;
+
 }
 
-/* ---- Accessibility: skip link -------------------------------------------- */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--kbg-color-accent);
-  color: var(--kbg-color-text);
-  padding: var(--space-xs) var(--space-sm);
-  z-index: 100;
-  transition: top var(--duration-fast) var(--ease-cinematic);
-}
-.skip-link:focus {
-  top: 0;
+
+/* Dark cinematic layer */
+
+.video-overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        rgba(10,10,10,0.55),
+        rgba(10,10,10,0.85)
+    );
+
+    z-index:1;
+
 }
 
-:focus-visible {
-  outline: 2px solid var(--kbg-color-luxury);
-  outline-offset: 3px;
+
+/* Navigation */
+
+.navigation {
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    padding:32px 64px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
 }
 
-/* ---- Section skeleton ----------------------------------------------------
-   Every part of the page — Opening, Hero, each placeholder, Closing — is a
-   full-viewport-minimum section. This is the structural rhythm of the page. */
-.kbg-section {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-lg) var(--space-md);
-  text-align: center;
+
+.logo {
+
+    width:140px;
+
+    height:auto;
+
 }
 
-/* ---- Navigation ----------------------------------------------------------- */
-.kbg-nav {
-  position: fixed;
-  inset-inline: 0;
-  top: 0;
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: var(--space-md);
-  z-index: var(--z-nav);
-  /* transparent over the hero video; no scroll-state styling yet */
-  background: linear-gradient(to bottom, rgba(10,10,10,0.55), transparent);
+
+.language-switch {
+
+    background:none;
+
+    border:1px solid var(--gold);
+
+    color:var(--white);
+
+    padding:10px 20px;
+
+    border-radius:12px;
+
 }
 
-.kbg-nav__mark {
-  font-family: var(--font-en-display);
-  font-size: 1.5rem;
-  letter-spacing: 0.08em;
-  color: var(--kbg-color-text);
-}
-html[lang="fa"] .kbg-nav__mark {
-  font-family: var(--font-fa-display);
+
+/* Hero */
+
+.hero {
+
+    position:relative;
+
+    z-index:2;
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
 }
 
-.kbg-lang-toggle {
-  background: transparent;
-  border: 1px solid var(--kbg-color-border);
-  color: var(--kbg-color-text);
-  border-radius: var(--radius-lg);
-  padding: 0.5rem 1.25rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: border-color var(--duration-fast) var(--ease-cinematic),
-              background-color var(--duration-fast) var(--ease-cinematic);
-}
-.kbg-lang-toggle:hover,
-.kbg-lang-toggle:focus-visible {
-  border-color: var(--kbg-color-luxury);
-  background: var(--kbg-color-bg-raised);
+
+.hero h1 {
+
+    font-size:clamp(36px,5vw,64px);
+
 }
 
-/* ---- Shared eyebrow label -------------------------------------------------- */
-.kbg-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  font-size: 0.75rem;
-  color: var(--kbg-color-luxury);
-  margin-bottom: var(--space-sm);
+
+.hero p {
+
+    margin-top:20px;
+
+    font-size:clamp(18px,2vw,26px);
+
 }
 
-/* ---- Opening ---------------------------------------------------------------- */
-.kbg-opening {
-  background: var(--kbg-color-bg);
-}
-.kbg-opening__mark {
-  font-size: clamp(3rem, 10vw, 7rem);
-  letter-spacing: 0.15em;
-  font-family: var(--font-en-display);
-}
-html[lang="fa"] .kbg-opening__mark {
-  font-family: var(--font-fa-display);
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.navigation {
+
+    padding:20px;
+
 }
 
-/* ---- Hero + video background -------------------------------------------------- */
-.kbg-hero {
-  padding: 0;
-  overflow: hidden;
+
+.logo {
+
+    width:100px;
+
 }
 
-.kbg-hero__video-wrap {
-  position: absolute;
-  inset: 0;
-  z-index: var(--z-video);
-}
 
-.kbg-hero__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Cinematic dimming so text stays legible over any footage */
-  filter: brightness(0.65) saturate(0.9);
-}
-
-.kbg-hero__scrim {
-  position: absolute;
-  inset: 0;
-  z-index: var(--z-scrim);
-  background: linear-gradient(
-    to bottom,
-    rgba(10,10,10,0.75) 0%,
-    rgba(10,10,10,0.35) 35%,
-    rgba(10,10,10,0.65) 100%
-  );
-}
-
-.kbg-hero__content {
-  position: relative;
-  z-index: var(--z-content);
-  max-width: 720px;
-  padding: var(--space-md);
-}
-
-.kbg-hero__title {
-  font-size: clamp(2.25rem, 6vw, 4.5rem);
-  margin-bottom: var(--space-sm);
-}
-
-.kbg-hero__subtitle {
-  font-size: 1.05rem;
-  max-width: 46ch;
-  margin-inline: auto;
-}
-
-.kbg-hero__scroll-cue {
-  position: absolute;
-  bottom: var(--space-md);
-  inset-inline: 0;
-  z-index: var(--z-content);
-  display: flex;
-  justify-content: center;
-}
-.kbg-hero__scroll-cue span {
-  width: 1px;
-  height: 40px;
-  background: var(--kbg-color-luxury);
-  display: block;
-}
-
-/* ---- Placeholder sections (Philosophy / Identity / Assets / AI / Music) ------- */
-.kbg-placeholder {
-  border-top: 1px solid var(--kbg-color-border);
-}
-
-.kbg-placeholder__index {
-  font-family: var(--font-en-display);
-  color: var(--kbg-color-accent);
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
-  margin-bottom: var(--space-sm);
-}
-
-.kbg-placeholder__title {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-}
-
-/* ---- Closing ------------------------------------------------------------------- */
-.kbg-closing {
-  border-top: 1px solid var(--kbg-color-border);
-  background: var(--kbg-color-bg-raised);
-}
-.kbg-closing h3 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: var(--space-sm);
-}
-
-/* ---- Responsive ------------------------------------------------------------------ */
-@media (max-width: 900px) {
-  .kbg-section { padding: var(--space-md) var(--space-sm); }
-  .kbg-nav { padding-inline: var(--space-sm); }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --nav-height: 72px;
-  }
-  .kbg-eyebrow { letter-spacing: 0.2em; }
-  .kbg-hero__subtitle { font-size: 0.95rem; }
 }
