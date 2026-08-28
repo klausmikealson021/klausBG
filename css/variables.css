@@ -1,1 +1,62 @@
 
+/* ==========================================================================
+   KBG — Design Tokens
+   Single source of truth for color, type, spacing, radius, shadow, motion.
+   Nothing in this file renders anything — it only defines variables.
+   ========================================================================== */
+
+:root {
+
+  /* ---- Color ------------------------------------------------------------ */
+  --kbg-color-bg:        #0A0A0A; /* base background */
+  --kbg-color-bg-raised: #131313; /* slightly lifted surface (nav, scrim) */
+  --kbg-color-text:      #F1EFE8; /* primary text */
+  --kbg-color-text-muted: #F1EFE8B3; /* ~70% opacity text for secondary copy */
+  --kbg-color-accent:    #8A0303; /* primary accent — deep red */
+  --kbg-color-luxury:    #9C7A3C; /* secondary accent — antique gold */
+  --kbg-color-border:    #F1EFE81A; /* hairline dividers, ~10% opacity */
+
+  /* ---- Typography — English ---------------------------------------------
+     Setup only. Final type scale/pairing to be designed later. */
+  --font-en-body:    'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-en-display: 'Cormorant Garamond', 'Noto Serif', Georgia, serif;
+  --font-en-script:  'Pacifico', cursive;
+
+  /* ---- Typography — Persian ---------------------------------------------
+     Setup only. Final type scale/pairing to be designed later. */
+  --font-fa-body:    'Vazirmatn', Tahoma, sans-serif;
+  --font-fa-display: 'Lalezar', var(--font-fa-body);
+  --font-fa-script:  'Noto Nastaliq Urdu', serif;
+
+  /* ---- Spacing scale ------------------------------------------------------ */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  8rem;
+  --space-2xl: 12rem;
+
+  /* ---- Radius / Shadow ---------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  --shadow-deep: 0 24px 64px rgba(0, 0, 0, 0.55);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* ---- Motion -------------------------------------------------------------- */
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast:   200ms;
+  --duration-base:   500ms;
+  --duration-slow:   1200ms;
+
+  /* ---- Layout ---------------------------------------------------------------- */
+  --nav-height: 88px;
+  --content-max-width: 1200px;
+
+  /* ---- Z-index scale ----------------------------------------------------------- */
+  --z-video: 0;
+  --z-scrim: 1;
+  --z-content: 2;
+  --z-nav: 10;
+}
