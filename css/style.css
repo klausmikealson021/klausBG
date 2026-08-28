@@ -1,3 +1,67 @@
+/* =========================
+   KBG Fonts
+========================= */
+
+
+/* Persian Fonts */
+
+@font-face {
+
+    font-family: "Vazirmatn";
+
+    src: url("../assets/fonts/Persian/Vazirmatn.woff2");
+
+}
+
+
+@font-face {
+
+    font-family: "Lalezar";
+
+    src: url("../assets/fonts/Persian/Lalezar.woff2");
+
+}
+
+
+@font-face {
+
+    font-family: "Nastaliq";
+
+    src: url("../assets/fonts/Persian/NotoNastaliq.woff2");
+
+}
+
+
+
+/* English Fonts */
+
+
+@font-face {
+
+    font-family: "NotoSerif";
+
+    src: url("../assets/fonts/English/NotoSerif.woff2");
+
+}
+
+
+@font-face {
+
+    font-family: "Cormorant";
+
+    src: url("../assets/fonts/English/CormorantGaramond.woff2");
+
+}
+
+
+@font-face {
+
+    font-family: "Pacifico";
+
+    src: url("../assets/fonts/English/Pacifico.woff2");
+
+}
+
 * {
     margin:0;
     padding:0;
