@@ -1,59 +1,22 @@
+.background-video {
 
-/* ==========================================================================
-   KBG — Animations
-   Foundational motion only: gentle reveal on load and a scroll cue.
-   Card-opening choreography and complex effects are intentionally NOT here —
-   those belong to a later pass, once real content exists.
-   ========================================================================== */
+    animation:fadeVideo 2s ease;
 
-@keyframes kbg-fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
-@keyframes kbg-scroll-cue {
-  0%   { transform: translateY(0);   opacity: 0.8; }
-  50%  { transform: translateY(10px); opacity: 0.3; }
-  100% { transform: translateY(0);   opacity: 0.8; }
-}
 
-/* Generic reveal utility — applied to Opening / Hero text on load */
-.kbg-fade-in {
-  animation: kbg-fade-up var(--duration-slow) var(--ease-cinematic) both;
-}
+@keyframes fadeVideo {
 
-/* Small stagger helper for grouped elements (eyebrow -> title -> subtitle) */
-.kbg-fade-in--delay-1 { animation-delay: 150ms; }
-.kbg-fade-in--delay-2 { animation-delay: 300ms; }
+    from {
 
-/* Language-switch cross-fade so text doesn't just "jump" between scripts.
-   main.js toggles body.is-switching briefly while it swaps the dictionary. */
-body {
-  transition: opacity var(--duration-fast) var(--ease-cinematic);
-}
-body.is-switching {
-  opacity: 0;
-}
+        opacity:0;
 
-.kbg-hero__scroll-cue span {
-  animation: kbg-scroll-cue 2.4s var(--ease-cinematic) infinite;
-}
+    }
 
-/* Respect motion preferences: disable everything above without breaking layout */
-@media (prefers-reduced-motion: reduce) {
-  .kbg-fade-in,
-  .kbg-hero__scroll-cue span {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-  .kbg-i18n-fade {
-    transition: none;
-  }
+    to {
+
+        opacity:1;
+
+    }
+
 }
