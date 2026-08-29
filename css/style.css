@@ -290,3 +290,111 @@ body {
 
 
 }
+/* =========================
+   Language Menu
+========================= */
+
+
+.language-menu {
+
+
+    position:absolute;
+
+    top:45px;
+
+    right:0;
+
+
+    width:140px;
+
+
+    padding:12px;
+
+
+    background:rgba(10,10,10,0.85);
+
+
+    border:1px solid var(--gold);
+
+
+    border-radius:16px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+
+    opacity:0;
+
+    visibility:hidden;
+
+
+    transform:translateY(-10px);
+
+
+    transition:0.4s ease;
+
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+.language-container:hover .language-menu {
+
+
+    opacity:1;
+
+    visibility:visible;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+
+.language-menu button {
+
+
+    background:transparent;
+
+
+    border:0;
+
+
+    color:var(--white);
+
+
+    padding:10px;
+
+
+    border-radius:10px;
+
+
+    cursor:pointer;
+
+
+    font-size:16px;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+.language-menu button:hover {
+
+
+    background:var(--red);
+
+
+}
