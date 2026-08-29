@@ -230,29 +230,7 @@ body {
     font-size:clamp(18px,2vw,26px);
 
 }
-
-
-
-/* Mobile */
-
-@media(max-width:768px){
-
-
-.navigation {
-
-    padding:20px;
-
-}
-
-
-.logo {
-
-    width:100px;
-
-}
-
-
-}
+ 
 
 /* =========================
    Language Icon
@@ -313,7 +291,7 @@ body {
 
     position:absolute;
 
-    top:50px;
+    top:45px;
 
     right:0;
 
