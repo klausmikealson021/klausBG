@@ -300,9 +300,11 @@ body {
 
     position:absolute;
 
-    top:45px;
+    top:50px;
 
     right:0;
+
+   transform-origin:top right;
 
 
     width:140px;
@@ -347,14 +349,11 @@ body {
 
 .language-container:hover .language-menu {
 
-
     opacity:1;
 
     visibility:visible;
 
-
     transform:translateY(0);
-
 
 }
 
@@ -396,5 +395,16 @@ body {
 
     background:var(--red);
 
+
+}
+@media(max-width:768px){
+
+    .language-menu{
+
+        right:-20px;
+
+        width:120px;
+
+    }
 
 }
