@@ -253,3 +253,40 @@ body {
 
 
 }
+
+/* =========================
+   Language Icon
+========================= */
+
+
+.language-container {
+
+    position: relative;
+
+}
+
+
+.language-icon {
+
+
+    font-size: 28px;
+
+    color: var(--gold);
+
+    cursor: pointer;
+
+    transition: 0.4s ease;
+
+
+}
+
+
+.language-icon:hover {
+
+
+    color: var(--red);
+
+    transform: translateY(-3px);
+
+
+}
