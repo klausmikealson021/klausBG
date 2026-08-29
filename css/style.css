@@ -266,28 +266,41 @@ body {
 }
 
 
-.language-icon {
+.language-toggle {
 
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+.language-toggle span {
 
     font-size: 36px;
 
     color: var(--gold);
 
-    cursor: pointer;
-
-    transition: 0.4s ease;
-
+    transition: 0.3s ease;
 
 }
 
 
-.language-icon:hover {
 
+.language-toggle:hover span {
 
     color: var(--red);
 
     transform: translateY(-3px);
-
 
 }
 /* =========================
@@ -347,7 +360,7 @@ body {
 
 
 
-.language-container:hover .language-menu {
+.language-container.active .language-menu {
 
     opacity:1;
 
